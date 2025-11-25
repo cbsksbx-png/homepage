@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jeongje history</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .row {
+        display: flex;
+        justify-content: unset;
+        margin-bottom: 10px;
+      }
+      .box {
+        border: 2px solid #000;
+        width: 1000px;
+        height: 300px;
+        margin: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+        font-size: 30px;
+      }
+      .box3 {
+        border: 2px solid #000;
+        width: 1000px;
+        height: 1000px;
+        margin: 10px;
+        box-sizing: border-box;
+        font-size: 30px;
+      }
+      .box4 {
+        border: 2px solid #000;
+        padding: 20px;
+        width: 1000px;
+        border-radius: 10px;
+        transition: height 0.5s ease; 
+        overflow: hidden;
+        height: 80px; 
+      }
+
+      #future-img {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.6s ease, height 0.6s ease;
+      }
+
+      .open {
+        height: 500px !important;
+      }
+      .open #future-img {
+        opacity: 1;
+        height: 400px;
+      }
+
+      .future-title {
+        cursor: pointer;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p style="font-size: 50px;">jeongje history</p>
+    <br><br>
+    <div class="row">
+      <p style="margin-top: auto;"><img src="./images/증명사진.jpg" width="auto"></p>
+      <div class="box box1">
+        profile
+        <br><br>
+         name : lee jungjea
+        <br>
+         birth : 2003-12-01
+        <br>
+         hometown : <a href="https://ko.wikipedia.org/wiki/%ED%95%B4%EB%82%A8_%EC%A0%84%EB%9D%BC%EC%9A%B0%EC%88%98%EC%98%81" target="_blank">haenam</a>
+        <br>
+         family : father, mother, older brother, younger brother
+      </div>
+      <div class="box box2">
+        <table border="1">
+            <thead>
+              <td> 좋아하는 색깔</td><td> 초록색</td>
+            </thead>
+            <tr>
+              <td> 좋아하는 음식</td><td><a href="file:///C:/Users/USER/Desktop/%EA%B3%BC%EC%A0%9C/CURRY.html" target="_blank"> 카레 / 카레창으로 이동 </a></td>
+            </tr>
+            <tr>
+              <td> 취미</td><td><a href="https://www.instagram.com/ljj_photo/" target="_blank"> 사진</a></td><td> 운동</td><td> 여행</td>
+            </tr>
+            <tr>
+              <td> 학과</td><td><a href="https://bioenv.jbnu.ac.kr/bioenv/index.do" target="_blank"> 생물환경화학과</a></td><td><a href="https://sfarm.jbnu.ac.kr/jsf/index.do" target="_blank"> 스마트팜학과</a></td>
+            </tr>
+        </table>
+      </div>
+    </div>
+
+    <hr style="border: solid 1px black">
+
+    <div class="row">
+      <div class="box box3">
+        <table border="1">
+          <li> 2003.12.01 ~ : living</li>
+          <li> 2010 ~ 2015 : <a href="https://usuyeong.es.jne.kr/usuyeong_es/main.do?sysId=usuyeong_es" target="_blank"> 우수영초등학교 재학</a></li>
+          <li> 2016 ~ 2018 : <a href="https://usuyeong.ms.jne.kr/usuyeong_ms/main.do?sysId=usuyeong_ms" target="_blank"> 우수영중학교 재학</a></li>
+          <li> 2019 ~ 2021 : <a href="https://namak.hs.jne.kr/namak_hs/main.do?sysId=namak_hs" target="_blank"> 남악고등학교 재학</a></li>
+          <li> 2022 ~ : 전북대학교 생물환경화학과 입학</li>
+          <li> 2023. 06. 27 ~ 2024.12.26 : 대한민국 육군 제 3보병사단 병장 만기전역</li>
+          <li> 2025 : 스마트팜학과 복수전공 </li>
+        </table>
+      </div>
+
+    <div class="row">
+      <div class="box box4" id="future-box">
+          <div class="future-title">FUTURE ▼</div>
+
+          <div id="future-img">
+            <img src="./images/미래계획.gif" alt="미래계획" width="100%">
+          </div>
+      </div>
+    </div>
+
+    <script>
+      const futureBox = document.getElementById("future-box");
+      const title = document.querySelector(".future-title");
+
+      title.addEventListener("click", () => {
+        futureBox.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
